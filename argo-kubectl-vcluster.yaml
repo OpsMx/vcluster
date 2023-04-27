@@ -9,10 +9,10 @@ spec:
       - name: argo-kubectl-vcluster
         command: ["/script/vcluster-create.sh"]
         args:
-        - tejatest@gmail.com
+        - USER@COMPANY.COM        # Please update the username
         env:
         - name: argocdhost
-          value: feb20limits.argo.ninja-test.opsmx.org
+          value: ARGOCD.DNS.HOST.COM.  # Please update the Argocd Ingress Value
         image: quay.io/opsmxpublic/argo-kubectl-vcluster:v1
         volumeMounts:
         - mountPath: /kube
