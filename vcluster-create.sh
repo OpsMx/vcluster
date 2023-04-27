@@ -29,6 +29,8 @@ sleep 30
 vcluster connect $username -n $username --update-current=false --server=https://"$ingresshost"
 kubectl --kubeconfig=kubeconfig.yaml get ns
 
+kubectl create secret generic $username-config --from-file=kubeconfig.yaml -n <ARGOCD_NAMESPACE>
+
 context=$(kubectl --kubeconfig=kubeconfig.yaml config get-contexts -o name)
 echo
 echo
