@@ -23,9 +23,12 @@ In argo-kubectl-vcluster.yaml replace the username and arogcd ingress host and a
 
 kubectl apply -f argo-kubectl-vcluster.yaml -n <ARGOCD_NAMESPACE>
 
+**TO DO **
 
 Get Kubeconfig file of the vcluster and send it to user.
 
 In ArgoCD namespace a secret will be created with the username provided in the above step . Decode the secret to access to get the kubeconfig file and send to user.
+
+Create Rbac so that only this user can access this cluster. 
 
 
